@@ -3,267 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEW 2026 봄 컬렉션 - 가구 & 강아지 용품</title>
+    <title>Brand Identity & Experience Designer - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="placeholder-images.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-        
-        * {
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        
-        .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.8s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .bounce {
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-        
-        .gradient-text {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .product-badge {
-            background: linear-gradient(45deg, #f093fb, #f5576c);
-        }
-    </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-white">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold gradient-text">PetHome</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 transition">홈</a>
-                    <a href="#furniture" class="nav-link text-gray-700 hover:text-purple-600 transition">가구</a>
-                    <a href="#dog-products" class="nav-link text-gray-700 hover:text-purple-600 transition">강아지 용품</a>
-                    <a href="#promotion" class="nav-link text-gray-700 hover:text-purple-600 transition">특별 혜택</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 transition">문의</a>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Portfolio</div>
+                <div class="nav-links">
+                    <a href="#home">홈</a>
+                    <a href="#about">소개</a>
+                    <a href="#projects">프로젝트</a>
+                    <a href="#skills">역량</a>
+                    <a href="#contact">연락처</a>
                 </div>
-                <button class="md:hidden" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="px-6 py-4 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-purple-600">홈</a>
-                <a href="#furniture" class="block text-gray-700 hover:text-purple-600">가구</a>
-                <a href="#dog-products" class="block text-gray-700 hover:text-purple-600">강아지 용품</a>
-                <a href="#promotion" class="block text-gray-700 hover:text-purple-600">특별 혜택</a>
-                <a href="#contact" class="block text-gray-700 hover:text-purple-600">문의</a>
-            </div>
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="#home">홈</a>
+            <a href="#about">소개</a>
+            <a href="#projects">프로젝트</a>
+            <a href="#skills">역량</a>
+            <a href="#contact">연락처</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-gradient min-h-screen flex items-center justify-center text-white pt-16">
-        <div class="container mx-auto px-6 text-center fade-in">
-            <div class="mb-6">
-                <span class="product-badge inline-block px-4 py-2 rounded-full text-white font-bold text-sm">
-                    NEW 2026 봄 컬렉션
+    <section id="home" class="hero-gradient">
+        <div class="hero-content scroll-reveal">
+            <div class="mb-8">
+                <span class="brand-badge">
+                    Financial Service Design Expert
                 </span>
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                당신의 공간을<br>
-                <span class="text-yellow-300">더 특별하게</span>
+            <h1 class="hero-title text-spacing">
+                금융 서비스를 <br>
+                <span class="highlight">디자인으로 혁신</span>
             </h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-100">
-                세련된 가구와 사랑스러운 강아지 용품이 함께하는 완벽한 라이프스타일
+            <p class="hero-subtitle">
+                Goldsmiths, University of London 디자인 전공<br>
+                복잡한 금융을 단순하게, 사용자 중심의 디자인 전문가
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="scrollToSection('furniture')" class="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105">
-                    가구 둘러보기
+            <div class="hero-buttons">
+                <button onclick="scrollToSection('projects')" class="btn-primary">
+                    금융 디자인 사례 보기
                 </button>
-                <button onclick="scrollToSection('dog-products')" class="bg-yellow-400 text-gray-800 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition transform hover:scale-105">
-                    강아지 용품 보기
+                <button onclick="scrollToSection('contact')" class="btn-secondary">
+                    연락하기
                 </button>
             </div>
-            <div class="mt-12 bounce">
-                <i class="fas fa-chevron-down text-3xl text-white opacity-70"></i>
+            <div class="bounce">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
 
-    <!-- Furniture Section -->
-    <section id="furniture" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">NEW 가구 컬렉션</span>
+    <!-- About Section -->
+    <section id="about" class="section-spacing about-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">
+                    <span class="gradient-text">전문성과 혁신</span>
                 </h2>
-                <p class="text-xl text-gray-600">2026년 봄, 당신의 공간을 바꿀 새로운 가구들</p>
+                <p class="section-subtitle">
+                    금융 서비스의 본질을 이해하고, <br>
+                    사용자 중심의 디자인으로 비즈니스 가치를 창출합니다.
+                </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Furniture Card 1 -->
-                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="모던 소파" class="w-full h-64 object-cover">
-                        <span class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">NEW</span>
+            <div class="feature-grid">
+                <div class="feature-card scroll-reveal card-hover">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">모던 릴렉스 소파</h3>
-                        <p class="text-gray-600 mb-4">편안함과 스타일을 완벽하게 조화한 3인용 소파</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-3xl font-bold text-purple-600">₩1,290,000</span>
-                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
-                                자세히 보기
-                            </button>
-                        </div>
-                    </div>
+                    <h3 class="feature-title">Financial UX Expertise</h3>
+                    <p class="feature-description">금융 서비스의 복잡성을 단순화하고, 사용자가 신뢰할 수 있는 직관적인 인터페이스를 설계합니다.</p>
                 </div>
-
-                <!-- Furniture Card 2 -->
-                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="식탁" class="w-full h-64 object-cover">
-                        <span class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">NEW</span>
+                
+                <div class="feature-card scroll-reveal card-hover">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">내츄럴 우드 식탁</h3>
-                        <p class="text-gray-600 mb-4">자연의 따뜻함을 그대로 담은 4인용 식탁 세트</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-3xl font-bold text-purple-600">₩890,000</span>
-                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
-                                자세히 보기
-                            </button>
-                        </div>
-                    </div>
+                    <h3 class="feature-title">Trust & Security Design</h3>
+                    <p class="feature-description">보안과 신뢰성을 시각적으로 구현하고, 금융 서비스에 대한 사용자의 안심감을 높입니다.</p>
                 </div>
-
-                <!-- Furniture Card 3 -->
-                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="책장" class="w-full h-64 object-cover">
-                        <span class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">NEW</span>
+                
+                <div class="feature-card scroll-reveal card-hover">
+                    <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">미니멀 서재 책장</h3>
-                        <p class="text-gray-600 mb-4">공간을 효율적으로 활용하는 5단 책장</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-3xl font-bold text-purple-600">₩450,000</span>
-                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
-                                자세히 보기
-                            </button>
-                        </div>
-                    </div>
+                    <h3 class="feature-title">Digital Innovation</h3>
+                    <p class="feature-description">최신 디지털 트렌드를 금융 서비스에 접목하여 혁신적인 사용자 경험을 창출합니다.</p>
+                </div>
+            </div>
+            
+            <div class="scroll-reveal" style="text-align: center; margin-top: 4rem;">
+                <div style="background: var(--light-blue-bg); padding: 2rem; border-radius: 1rem; max-width: 800px; margin: 0 auto;">
+                    <h3 style="color: var(--toss-blue); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700;">금융 디자인 전문가의 가치</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">
+                        복잡한 금융 정보를 명확하게 전달하고, <br>
+                        사용자의 재무적 결정을 돕는 디자인으로 <br>
+                        <strong style="color: var(--toss-blue);">비즈니스 성과와 사용자 만족도를 동시에 달성</strong>합니다.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dog Products Section -->
-    <section id="dog-products" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">강아지를 위한 특별한 선물</span>
+    <!-- Projects Section -->
+    <section id="projects" class="section-spacing projects-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">
+                    <span class="gradient-text">금융 디자인 프로젝트</span>
                 </h2>
-                <p class="text-xl text-gray-600">사랑하는 반려견을 위한 프리미엄 용품들</p>
+                <p class="section-subtitle">비즈니스 성과를 증명한 금융 서비스 디자인 사례</p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Dog Product 1 -->
-                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <img src="https://picsum.photos/seed/dogbed/400/300" alt="강아지 침대" class="w-full h-48 object-cover">
-                        <span class="absolute top-4 right-4 bg-yellow-400 text-gray-800 px-2 py-1 rounded-full text-xs font-bold">HOT</span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold mb-2">럭셔리 강아지 침대</h3>
-                        <p class="text-gray-600 text-sm mb-3">기억력 폼 소재의 편안한 휴식 공간</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-purple-600">₩89,000</span>
-                            <button class="bg-yellow-400 text-gray-800 px-3 py-1 rounded-lg text-sm hover:bg-yellow-300 transition">
-                                구매하기
-                            </button>
+            <div class="project-grid">
+                <!-- Project 1: Financial App Redesign -->
+                <div class="project-card scroll-reveal card-hover">
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1563986768494-8dee857c439b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Financial App" class="project-image">
+                        <div class="project-info">
+                            <div class="mb-4">
+                                <span class="project-badge toss-blue-bg">사용자 경험 개선</span>
+                            </div>
+                            <h3 class="project-title">모바일 금융 앱 리디자인</h3>
+                            <p class="project-description">복잡한 금융 정보를 시각적으로 단순화하고, 사용자의 투자 결정을 돕는 직관적인 UI/UX를 설계하여 앱 사용률을 45% 향상시켰습니다.</p>
+                            <div class="project-tags">
+                                <span class="tag">Mobile Banking</span>
+                                <span class="tag">UX Research</span>
+                                <span class="tag">Data Visualization</span>
+                            </div>
+                            <a href="#" class="project-link">자세히 보기 →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dog Product 2 -->
-                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <img src="https://picsum.photos/seed/dogtreats/400/300" alt="강아지 간식" class="w-full h-48 object-cover">
-                        <span class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">NEW</span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold mb-2">유기농 강아지 간식</h3>
-                        <p class="text-gray-600 text-sm mb-3">건강한 재료로 만든 영양간식 세트</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-purple-600">₩29,000</span>
-                            <button class="bg-yellow-400 text-gray-800 px-3 py-1 rounded-lg text-sm hover:bg-yellow-300 transition">
-                                구매하기
-                            </button>
+                <!-- Project 2: Investment Platform -->
+                <div class="project-card scroll-reveal card-hover">
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Investment Platform" class="project-image">
+                        <div class="project-info">
+                            <div class="mb-4">
+                                <span class="project-badge" style="background: #10B981;">신뢰성 설계</span>
+                            </div>
+                            <h3 class="project-title">디지털 투자 플랫폼</h3>
+                            <p class="project-description">실시간 데이터 시각화와 개인화된 포트폴리오 추천 기능으로, 초보 투자자들의 이해도를 높이고 플랫폼 신뢰도를 30% 향상시켰습니다.</p>
+                            <div class="project-tags">
+                                <span class="tag">FinTech Design</span>
+                                <span class="tag">Trust Design</span>
+                                <span class="tag">Personalization</span>
+                            </div>
+                            <a href="#" class="project-link">자세히 보기 →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dog Product 3 -->
-                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <img src="https://picsum.photos/seed/dogtoys/400/300" alt="강아지 장난감" class="w-full h-48 object-cover">
-                        <span class="absolute top-4 right-4 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold">BEST</span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold mb-2">지능 개발 장난감</h3>
-                        <p class="text-gray-600 text-sm mb-3">두뇌 발달을 돕는 교육용 장난감</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-purple-600">₩35,000</span>
-                            <button class="bg-yellow-400 text-gray-800 px-3 py-1 rounded-lg text-sm hover:bg-yellow-300 transition">
-                                구매하기
-                            </button>
+                <!-- Project 3: Insurance Service -->
+                <div class="project-card scroll-reveal card-hover">
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1454165804609-c3d77bc85017?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Insurance Service" class="project-image">
+                        <div class="project-info">
+                            <div class="mb-4">
+                                <span class="project-badge" style="background: #8B5CF6;">보험료 비교 시스템</span>
+                            </div>
+                            <h3 class="project-title">보험 상품 비교 플랫폼</h3>
+                            <p class="project-description">복잡한 보험 상품 정보를 비교하기 쉽게 시각화하고, 맞춤형 추천 알고리즘으로 사용자의 최적 상품 선택을 도와 60%의 전환율 향상을 달성했습니다.</p>
+                            <div class="project-tags">
+                                <span class="tag">Comparison Design</span>
+                                <span class="tag">Information Architecture</span>
+                                <span class="tag">Conversion Optimization</span>
+                            </div>
+                            <a href="#" class="project-link">자세히 보기 →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dog Product 4 -->
-                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="relative">
-                        <img src="https://picsum.photos/seed/doggrooming/400/300" alt="강아지 그루밍" class="w-full h-48 object-cover">
-                        <span class="absolute top-4 right-4 bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-bold">NEW</span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold mb-2">프리미엄 그루밍 세트</h3>
-                        <p class="text-gray-600 text-sm mb-3">전문가용 그루밍 도구 7종 세트</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-purple-600">₩65,000</span>
-                            <button class="bg-yellow-400 text-gray-800 px-3 py-1 rounded-lg text-sm hover:bg-yellow-300 transition">
-                                구매하기
-                            </button>
+                <!-- Project 4: Banking Dashboard -->
+                <div class="project-card scroll-reveal card-hover">
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Banking Dashboard" class="project-image">
+                        <div class="project-info">
+                            <div class="mb-4">
+                                <span class="project-badge" style="background: #F97316;">기업용 금융 대시보드</span>
+                            </div>
+                            <h3 class="project-title">B2B 금융 분석 대시보드</h3>
+                            <p class="project-description">실시간 재무 데이터 분석과 예측 기능을 제공하는 기업용 대시보드를 설계하여 재무팀의 의사결정 효율을 50% 개선하고 운영 비용을 25% 절감했습니다.</p>
+                            <div class="project-tags">
+                                <span class="tag">Dashboard Design</span>
+                                <span class="tag">Data Analytics</span>
+                                <span class="tag">B2B Solutions</span>
+                            </div>
+                            <a href="#" class="project-link">자세히 보기 →</a>
                         </div>
                     </div>
                 </div>
@@ -271,167 +213,221 @@
         </div>
     </section>
 
-    <!-- Promotion Section -->
-    <section id="promotion" class="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-8">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    🎉 한정 특별 혜택 🎉
+    <!-- Skills Section -->
+    <section id="skills" class="section-spacing skills-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">
+                    <span class="gradient-text">금융 디자인 전문성</span>
                 </h2>
-                <p class="text-xl mb-8">지금만 누릴 수 있는 최대 30% 할인!</p>
+                <p class="section-subtitle">금융 서비스 디자인 전문가의 핵심 역량과 도구</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-6">
-                    <i class="fas fa-percentage text-4xl mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-2">첫 구매 20% 할인</h3>
-                    <p class="text-lg">신규 고객을 위한 특별 할인 혜택</p>
+            <div class="skills-grid">
+                <!-- Financial Design Skills -->
+                <div class="skill-category scroll-reveal">
+                    <h3>Financial Design Expertise</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-bullet"></div>
+                            <span class="skill-name">FinTech UX Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-bullet"></div>
+                            <span class="skill-name">Data Visualization</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-bullet"></div>
+                            <span class="skill-name">Trust & Security Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-bullet"></div>
+                            <span class="skill-name">Mobile Banking UI</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-bullet"></div>
+                            <span class="skill-name">Dashboard Design</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-6">
-                    <i class="fas fa-truck text-4xl mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-2">무료 배송</h3>
-                    <p class="text-lg">5만원 이상 구매 시 무료 배송 서비스</p>
-                </div>
-                <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-6">
-                    <i class="fas fa-gift text-4xl mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-2">사은품 증정</h3>
-                    <p class="text-lg">10만원 이상 구매 시 특별 사은품</p>
+                
+                <!-- Tools -->
+                <div class="skill-category scroll-reveal">
+                    <h3>Design & Analytics Tools</h3>
+                    <div class="tools-grid">
+                        <div class="tool-card card-hover">
+                            <i class="fab fa-figma tool-icon"></i>
+                            <p class="tool-name">Figma</p>
+                        </div>
+                        <div class="tool-card card-hover">
+                            <i class="fas fa-chart-bar tool-icon"></i>
+                            <p class="tool-name">Tableau</p>
+                        </div>
+                        <div class="tool-card card-hover">
+                            <i class="fas fa-pen-nib tool-icon"></i>
+                            <p class="tool-name">Adobe CC</p>
+                        </div>
+                        <div class="tool-card card-hover">
+                            <i class="fab fa-sketch tool-icon"></i>
+                            <p class="tool-name">Sketch</p>
+                        </div>
+                        <div class="tool-card card-hover">
+                            <i class="fas fa-database tool-icon"></i>
+                            <p class="tool-name">SQL</p>
+                        </div>
+                        <div class="tool-card card-hover">
+                            <i class="fas fa-code tool-icon"></i>
+                            <p class="tool-name">React</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Design Strategy Section -->
+    <section class="section-spacing strategy-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">
+                    <span class="gradient-text">금융 디자인 전략</span>
+                </h2>
+                <p class="section-subtitle">데이터 기반의 금융 서비스 디자인 전략</p>
+            </div>
             
-            <div class="bg-white text-purple-600 rounded-xl p-8 max-w-2xl mx-auto">
-                <h3 class="text-2xl font-bold mb-4">📧 뉴스레터 구독하고 추가 10% 할인받기!</h3>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <input type="email" placeholder="이메일 주소를 입력하세요" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600">
-                    <button class="bg-purple-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-purple-700 transition">
-                        구독하기
-                    </button>
+            <div class="strategy-grid">
+                <div class="strategy-card scroll-reveal card-hover">
+                    <div class="strategy-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="strategy-title">User Research & Financial Behavior</h3>
+                    <p class="strategy-description">금융 사용자들의 행동 패턴과 심리를 분석하여, 재무적 의사결정을 돕는 직관적인 디자인 시스템을 구축합니다.</p>
+                    <div class="strategy-tags">
+                        <span class="strategy-tag">Behavioral Analysis</span>
+                        <span class="strategy-tag">User Testing</span>
+                        <span class="strategy-tag">Financial Psychology</span>
+                    </div>
+                </div>
+                
+                <div class="strategy-card scroll-reveal card-hover">
+                    <div class="strategy-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="strategy-title">Trust Design & Security UX</h3>
+                    <p class="strategy-description">금융 서비스의 보안과 신뢰성을 시각적으로 구현하고, 사용자의 안심감을 높이는 디자인 원칙을 적용합니다.</p>
+                    <div class="strategy-tags">
+                        <span class="strategy-tag">Security Design</span>
+                        <span class="strategy-tag">Trust Signals</span>
+                        <span class="strategy-tag">Compliance UX</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">문의하기</span>
+    <section id="contact" class="section-spacing contact-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">
+                    <span class="gradient-text">협업 제안</span>
                 </h2>
-                <p class="text-xl text-gray-600">궁금한 점이 있다면 언제든지 연락주세요</p>
+                <p class="section-subtitle">금융 서비스 디자인 전문가와 함께 성장을 만들어갈 기회</p>
             </div>
             
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-6">연락 정보</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <i class="fas fa-phone text-purple-600 text-xl w-8"></i>
-                                <span class="text-lg">02-1234-5678</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-envelope text-purple-600 text-xl w-8"></i>
-                                <span class="text-lg">info@pethome.co.kr</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-map-marker-alt text-purple-600 text-xl w-8"></i>
-                                <span class="text-lg">서울시 강남구 테헤란로 123</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-clock text-purple-600 text-xl w-8"></i>
-                                <span class="text-lg">평일 10:00 - 18:00</span>
-                            </div>
+            <div class="contact-highlight scroll-reveal">
+                <p class="contact-quote">
+                    "금융 디자인이 토스증권을 더 신뢰받는 서비스로 만들겠습니다"
+                </p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info scroll-reveal">
+                    <h3>연락 정보</h3>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span class="contact-text">fintech.designer@professional.com</span>
                         </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="text-xl font-bold mb-4">소셜 미디어</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-700 transition">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-700 transition">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="#" class="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-700 transition">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                                <a href="#" class="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-700 transition">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin contact-icon"></i>
+                            <span class="contact-text">linkedin.com/in/financial-designer</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-behance contact-icon"></i>
+                            <span class="contact-text">behance.net/fintech-designer</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe contact-icon"></i>
+                            <span class="contact-text">Seoul, Korea</span>
                         </div>
                     </div>
                     
-                    <div>
-                        <h3 class="text-2xl font-bold mb-6">문의 양식</h3>
-                        <form class="space-y-4">
-                            <input type="text" placeholder="이름" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600">
-                            <input type="email" placeholder="이메일" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600">
-                            <textarea placeholder="문의 내용" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600"></textarea>
-                            <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition">
-                                문의하기
-                            </button>
-                        </form>
+                    <h4>금융 디자인 전문 분야</h4>
+                    <div class="expertise-tags">
+                        <span class="expertise-tag">FinTech UX</span>
+                        <span class="expertise-tag">Mobile Banking</span>
+                        <span class="expertise-tag">Data Visualization</span>
+                        <span class="expertise-tag">Trust Design</span>
                     </div>
+                </div>
+                
+                <div class="contact-form scroll-reveal">
+                    <h3>프로젝트 문의</h3>
+                    <form>
+                        <input type="text" placeholder="이름" class="form-input">
+                        <input type="email" placeholder="이메일" class="form-input">
+                        <input type="text" placeholder="회사명 (선택사항)" class="form-input">
+                        <textarea placeholder="금융 서비스 디자인 프로젝트 내용" class="form-textarea"></textarea>
+                        <button type="submit" class="btn-submit">문의하기</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h4 class="text-2xl font-bold mb-4 gradient-text">PetHome</h4>
-                    <p class="text-gray-400">당신의 공간을 더 특별하게 만드는 가구와 반려동물 용품 전문 쇼핑몰</p>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="gradient-text">Financial Design Expert</span>
                 </div>
-                <div>
-                    <h5 class="text-lg font-bold mb-4">빠른 링크</h5>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#furniture" class="hover:text-white transition">가구</a></li>
-                        <li><a href="#dog-products" class="hover:text-white transition">강아지 용품</a></li>
-                        <li><a href="#promotion" class="hover:text-white transition">특별 혜택</a></li>
-                        <li><a href="#contact" class="hover:text-white transition">문의</a></li>
-                    </ul>
+                <p class="footer-description">
+                    금융 서비스 디자인으로 비즈니스 가치를 창출하는 전문가
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
                 </div>
-                <div>
-                    <h5 class="text-lg font-bold mb-4">고객 서비스</h5>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition">배송 정보</a></li>
-                        <li><a href="#" class="hover:text-white transition">교환 및 환불</a></li>
-                        <li><a href="#" class="hover:text-white transition">자주 묻는 질문</a></li>
-                        <li><a href="#" class="hover:text-white transition">이용약관</a></li>
-                    </ul>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Financial Service Design Expert. All rights reserved.</p>
                 </div>
-                <div>
-                    <h5 class="text-lg font-bold mb-4">회사 정보</h5>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>사업자등록번호: 123-45-67890</li>
-                        <li>통신판매업신고: 제2024-서울강남-1234호</li>
-                        <li>대표: 김펫홈</li>
-                        <li>주소: 서울시 강남구 테헤란로 123</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2026 PetHome. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
         // Smooth scrolling
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             section.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
         }
 
         // Smooth scroll for navigation links
@@ -443,12 +439,12 @@
                 if (targetSection) {
                     targetSection.scrollIntoView({ behavior: 'smooth' });
                     // Close mobile menu if open
-                    document.getElementById('mobileMenu').classList.add('hidden');
+                    document.getElementById('mobileMenu').classList.remove('active');
                 }
             });
         });
 
-        // Add fade-in animation on scroll
+        // Scroll reveal animation
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -457,34 +453,40 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
+                    entry.target.classList.add('active');
                 }
             });
         }, observerOptions);
 
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
+        // Observe all scroll-reveal elements
+        document.querySelectorAll('.scroll-reveal').forEach(element => {
+            observer.observe(element);
         });
 
         // Form submission
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('문의가 접수되었습니다. 빠른 시일 내에 답변드리겠습니다.');
+            alert('메시지가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.');
             this.reset();
         });
 
-        // Newsletter subscription
-        document.querySelector('input[type="email"]').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                const email = this.value;
-                if (email && email.includes('@')) {
-                    alert('뉴스레터 구독이 완료되었습니다! 추가 10% 할인쿠폰이 발송되었습니다.');
-                    this.value = '';
-                } else {
-                    alert('올바른 이메일 주소를 입력해주세요.');
-                }
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-gradient');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add initial animation to hero section
+            const heroElement = document.querySelector('.hero-content');
+            if (heroElement) {
+                setTimeout(() => {
+                    heroElement.classList.add('active');
+                }, 100);
             }
         });
     </script>

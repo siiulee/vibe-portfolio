@@ -6,298 +6,206 @@
     <title>Brand Identity & Experience Designer - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="placeholder-images.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;700;900&display=swap');
-        
-        * {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
-            letter-spacing: -0.02em;
-            line-height: 1.6;
-        }
-        
-        .hero-gradient {
-            background: linear-gradient(135deg, #0048FF 0%, #0066FF 100%);
-        }
-        
-        .toss-blue {
-            color: #0048FF;
-        }
-        
-        .toss-blue-bg {
-            background-color: #0048FF;
-        }
-        
-        .light-blue-bg {
-            background-color: #F0F4FF;
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.8s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .bounce {
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-        
-        .gradient-text {
-            background: linear-gradient(45deg, #0048FF, #0066FF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .brand-badge {
-            background: linear-gradient(45deg, #0048FF, #0066FF);
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 72, 255, 0.15);
-        }
-        
-        .text-spacing {
-            letter-spacing: -0.04em;
-        }
-        
-        .section-spacing {
-            padding: 6rem 0;
-        }
-    </style>
 </head>
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold toss-blue">Portfolio</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-toss-blue transition">홈</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-toss-blue transition">소개</a>
-                    <a href="#projects" class="nav-link text-gray-700 hover:text-toss-blue transition">프로젝트</a>
-                    <a href="#skills" class="nav-link text-gray-700 hover:text-toss-blue transition">역량</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-toss-blue transition">연락처</a>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Portfolio</div>
+                <div class="nav-links">
+                    <a href="#home">홈</a>
+                    <a href="#about">소개</a>
+                    <a href="#projects">프로젝트</a>
+                    <a href="#skills">역량</a>
+                    <a href="#contact">연락처</a>
                 </div>
-                <button class="md:hidden" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="px-6 py-4 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-toss-blue">홈</a>
-                <a href="#about" class="block text-gray-700 hover:text-toss-blue">소개</a>
-                <a href="#projects" class="block text-gray-700 hover:text-toss-blue">프로젝트</a>
-                <a href="#skills" class="block text-gray-700 hover:text-toss-blue">역량</a>
-                <a href="#contact" class="block text-gray-700 hover:text-toss-blue">연락처</a>
-            </div>
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="#home">홈</a>
+            <a href="#about">소개</a>
+            <a href="#projects">프로젝트</a>
+            <a href="#skills">역량</a>
+            <a href="#contact">연락처</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-gradient min-h-screen flex items-center justify-center text-white pt-16">
-        <div class="container mx-auto px-6 text-center scroll-reveal">
+    <section id="home" class="hero-gradient">
+        <div class="hero-content scroll-reveal">
             <div class="mb-8">
-                <span class="brand-badge inline-block px-6 py-3 rounded-full text-white font-bold text-sm mb-6">
-                    Brand Identity & Experience Designer
+                <span class="brand-badge">
+                    Financial Service Design Expert
                 </span>
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-spacing">
-                디자인으로 브랜드를<br>
-                <span class="text-yellow-300">증명하는 디자이너</span>
+            <h1 class="hero-title text-spacing">
+                금융 서비스를 <br>
+                <span class="highlight">디자인으로 혁신</span>
             </h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
+            <p class="hero-subtitle">
                 Goldsmiths, University of London 디자인 전공<br>
-                비즈니스 성과를 만드는 브랜드 디자인 전문가
+                복잡한 금융을 단순하게, 사용자 중심의 디자인 전문가
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <button onclick="scrollToSection('projects')" class="bg-white text-toss-blue px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105">
-                    프로젝트 보기
+            <div class="hero-buttons">
+                <button onclick="scrollToSection('projects')" class="btn-primary">
+                    금융 디자인 사례 보기
                 </button>
-                <button onclick="scrollToSection('contact')" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-toss-blue transition transform hover:scale-105">
+                <button onclick="scrollToSection('contact')" class="btn-secondary">
                     연락하기
                 </button>
             </div>
             <div class="bounce">
-                <i class="fas fa-chevron-down text-3xl text-white opacity-70"></i>
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-spacing bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16 scroll-reveal">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">디자인 철학</span>
-                    </h2>
-                    <p class="text-xl text-gray-600 leading-relaxed">
-                        브랜드의 가치를 시각적으로 증명하고, <br>
-                        사용자 경험을 통해 비즈니스 성과를 창출합니다.
-                    </p>
+    <section id="about" class="section-spacing about-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">
+                    <span class="gradient-text">전문성과 혁신</span>
+                </h2>
+                <p class="section-subtitle">
+                    금융 서비스의 본질을 이해하고, <br>
+                    사용자 중심의 디자인으로 비즈니스 가치를 창출합니다.
+                </p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card scroll-reveal card-hover">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="feature-title">Financial UX Expertise</h3>
+                    <p class="feature-description">금융 서비스의 복잡성을 단순화하고, 사용자가 신뢰할 수 있는 직관적인 인터페이스를 설계합니다.</p>
                 </div>
                 
-                <div class="grid md:grid-cols-3 gap-8 mb-16">
-                    <div class="text-center scroll-reveal card-hover bg-white p-8 rounded-2xl shadow-lg">
-                        <div class="w-16 h-16 mx-auto mb-6 bg-toss-blue rounded-full flex items-center justify-center">
-                            <i class="fas fa-lightbulb text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 toss-blue">Design Research</h3>
-                        <p class="text-gray-600">데이터 기반의 디자인 리서치로 사용자 인사이트를 도출하고 브랜드 전략을 수립합니다.</p>
+                <div class="feature-card scroll-reveal card-hover">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    
-                    <div class="text-center scroll-reveal card-hover bg-white p-8 rounded-2xl shadow-lg">
-                        <div class="w-16 h-16 mx-auto mb-6 bg-toss-blue rounded-full flex items-center justify-center">
-                            <i class="fas fa-palette text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 toss-blue">Brand Identity</h3>
-                        <p class="text-gray-600">일관된 브랜드 아이덴티티를 구축하고 모든 터치포인트에서 통합된 경험을 설계합니다.</p>
+                    <h3 class="feature-title">Trust & Security Design</h3>
+                    <p class="feature-description">보안과 신뢰성을 시각적으로 구현하고, 금융 서비스에 대한 사용자의 안심감을 높입니다.</p>
+                </div>
+                
+                <div class="feature-card scroll-reveal card-hover">
+                    <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
                     </div>
-                    
-                    <div class="text-center scroll-reveal card-hover bg-white p-8 rounded-2xl shadow-lg">
-                        <div class="w-16 h-16 mx-auto mb-6 bg-toss-blue rounded-full flex items-center justify-center">
-                            <i class="fas fa-chart-line text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 toss-blue">Business Impact</h3>
-                        <p class="text-gray-600">디자인이 비즈니스 성과에 미치는 영향을 측정하고 지속 가능한 성장을 견인합니다.</p>
-                    </div>
+                    <h3 class="feature-title">Digital Innovation</h3>
+                    <p class="feature-description">최신 디지털 트렌드를 금융 서비스에 접목하여 혁신적인 사용자 경험을 창출합니다.</p>
+                </div>
+            </div>
+            
+            <div class="scroll-reveal" style="text-align: center; margin-top: 4rem;">
+                <div style="background: var(--light-blue-bg); padding: 2rem; border-radius: 1rem; max-width: 800px; margin: 0 auto;">
+                    <h3 style="color: var(--toss-blue); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700;">금융 디자인 전문가의 가치</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">
+                        복잡한 금융 정보를 명확하게 전달하고, <br>
+                        사용자의 재무적 결정을 돕는 디자인으로 <br>
+                        <strong style="color: var(--toss-blue);">비즈니스 성과와 사용자 만족도를 동시에 달성</strong>합니다.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section-spacing light-blue-bg">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                    <span class="gradient-text">주요 프로젝트</span>
+    <section id="projects" class="section-spacing projects-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">
+                    <span class="gradient-text">금융 디자인 프로젝트</span>
                 </h2>
-                <p class="text-xl text-gray-600">비즈니스 성과를 증명한 브랜드 디자인 프로젝트</p>
+                <p class="section-subtitle">비즈니스 성과를 증명한 금융 서비스 디자인 사례</p>
             </div>
             
-            <div class="space-y-12">
-                <!-- Project 1: Natural History Museum -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden scroll-reveal card-hover">
-                    <div class="md:flex">
-                        <div class="md:w-1/2">
-                            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Natural History Museum" class="w-full h-64 md:h-full object-cover">
-                        </div>
-                        <div class="md:w-1/2 p-8">
+            <div class="project-grid">
+                <!-- Project 1: Financial App Redesign -->
+                <div class="project-card scroll-reveal card-hover">
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1563986768494-8dee857c439b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Financial App" class="project-image">
+                        <div class="project-info">
                             <div class="mb-4">
-                                <span class="bg-toss-blue text-white px-3 py-1 rounded-full text-sm font-bold">최우수 크리에이티브 팀 수상</span>
+                                <span class="project-badge toss-blue-bg">사용자 경험 개선</span>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4 toss-blue">Natural History Museum</h3>
-                            <p class="text-gray-600 mb-4">자연사 박물관의 브랜드 경험 재설계 프로젝트로, 방문객 참여도를 40% 향상시키고 최우수 크리에이티브 팀상을 수상했습니다.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Brand Experience Design</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Visual Identity</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Spatial Design</span>
+                            <h3 class="project-title">모바일 금융 앱 리디자인</h3>
+                            <p class="project-description">복잡한 금융 정보를 시각적으로 단순화하고, 사용자의 투자 결정을 돕는 직관적인 UI/UX를 설계하여 앱 사용률을 45% 향상시켰습니다.</p>
+                            <div class="project-tags">
+                                <span class="tag">Mobile Banking</span>
+                                <span class="tag">UX Research</span>
+                                <span class="tag">Data Visualization</span>
                             </div>
-                            <button class="text-toss-blue font-bold hover:underline">자세히 보기 →</button>
+                            <a href="#" class="project-link">자세히 보기 →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2: Samsung KX -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden scroll-reveal card-hover">
-                    <div class="md:flex">
-                        <div class="md:w-1/2 md:order-2">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Samsung KX" class="w-full h-64 md:h-full object-cover">
-                        </div>
-                        <div class="md:w-1/2 p-8 md:order-1">
+                <!-- Project 2: Investment Platform -->
+                <div class="project-card scroll-reveal card-hover">
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Investment Platform" class="project-image">
+                        <div class="project-info">
                             <div class="mb-4">
-                                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">글로벌 브랜드 경험 설계</span>
+                                <span class="project-badge" style="background: #10B981;">신뢰성 설계</span>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4 toss-blue">Samsung KX</h3>
-                            <p class="text-gray-600 mb-4">130명+ 이벤트 운영을 '글로벌 브랜드 경험 설계 및 현장 인터랙션 분석'으로 재정의하여 브랜드 인지도를 25% 향상시켰습니다.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Brand Communication</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Event Design</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">UX Strategy</span>
+                            <h3 class="project-title">디지털 투자 플랫폼</h3>
+                            <p class="project-description">실시간 데이터 시각화와 개인화된 포트폴리오 추천 기능으로, 초보 투자자들의 이해도를 높이고 플랫폼 신뢰도를 30% 향상시켰습니다.</p>
+                            <div class="project-tags">
+                                <span class="tag">FinTech Design</span>
+                                <span class="tag">Trust Design</span>
+                                <span class="tag">Personalization</span>
                             </div>
-                            <button class="text-toss-blue font-bold hover:underline">자세히 보기 →</button>
+                            <a href="#" class="project-link">자세히 보기 →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3: PDF Seoul -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden scroll-reveal card-hover">
-                    <div class="md:flex">
-                        <div class="md:w-1/2">
-                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PDF Seoul" class="w-full h-64 md:h-full object-cover">
-                        </div>
-                        <div class="md:w-1/2 p-8">
+                <!-- Project 3: Insurance Service -->
+                <div class="project-card scroll-reveal card-hover">
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1454165804609-c3d77bc85017?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Insurance Service" class="project-image">
+                        <div class="project-info">
                             <div class="mb-4">
-                                <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">브랜드 아이덴티티 구축</span>
+                                <span class="project-badge" style="background: #8B5CF6;">보험료 비교 시스템</span>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4 toss-blue">PDF Seoul</h3>
-                            <p class="text-gray-600 mb-4">'매거진 제작 및 팝업'을 '브랜드 아이덴티티 구축 및 온-오프라인 매체 통합 브랜딩'으로 확장하여 통합 브랜드 경험을 설계했습니다.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Brand System</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Publication Design</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Omni-channel</span>
+                            <h3 class="project-title">보험 상품 비교 플랫폼</h3>
+                            <p class="project-description">복잡한 보험 상품 정보를 비교하기 쉽게 시각화하고, 맞춤형 추천 알고리즘으로 사용자의 최적 상품 선택을 도와 60%의 전환율 향상을 달성했습니다.</p>
+                            <div class="project-tags">
+                                <span class="tag">Comparison Design</span>
+                                <span class="tag">Information Architecture</span>
+                                <span class="tag">Conversion Optimization</span>
                             </div>
-                            <button class="text-toss-blue font-bold hover:underline">자세히 보기 →</button>
+                            <a href="#" class="project-link">자세히 보기 →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 4: Design Incubating -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden scroll-reveal card-hover">
-                    <div class="md:flex">
-                        <div class="md:w-1/2 md:order-2">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Design Incubating" class="w-full h-64 md:h-full object-cover">
-                        </div>
-                        <div class="md:w-1/2 p-8 md:order-1">
+                <!-- Project 4: Banking Dashboard -->
+                <div class="project-card scroll-reveal card-hover">
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Banking Dashboard" class="project-image">
+                        <div class="project-info">
                             <div class="mb-4">
-                                <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">브랜드 전략 수립</span>
+                                <span class="project-badge" style="background: #F97316;">기업용 금융 대시보드</span>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4 toss-blue">Design Incubating</h3>
-                            <p class="text-gray-600 mb-4">'MVP 설계'를 '브랜드 전략 수립 및 비즈니스 가설 검증 디자인'으로 발전시켜 스타트업의 브랜드 가치를 3배 향상시켰습니다.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Design Strategy</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Brand Validation</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Growth Design</span>
+                            <h3 class="project-title">B2B 금융 분석 대시보드</h3>
+                            <p class="project-description">실시간 재무 데이터 분석과 예측 기능을 제공하는 기업용 대시보드를 설계하여 재무팀의 의사결정 효율을 50% 개선하고 운영 비용을 25% 절감했습니다.</p>
+                            <div class="project-tags">
+                                <span class="tag">Dashboard Design</span>
+                                <span class="tag">Data Analytics</span>
+                                <span class="tag">B2B Solutions</span>
                             </div>
-                            <button class="text-toss-blue font-bold hover:underline">자세히 보기 →</button>
+                            <a href="#" class="project-link">자세히 보기 →</a>
                         </div>
                     </div>
                 </div>
@@ -306,70 +214,70 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section-spacing bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                    <span class="gradient-text">디자인 역량</span>
+    <section id="skills" class="section-spacing skills-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">
+                    <span class="gradient-text">금융 디자인 전문성</span>
                 </h2>
-                <p class="text-xl text-gray-600">브랜드 디자인 전문가의 핵심 역량과 도구</p>
+                <p class="section-subtitle">금융 서비스 디자인 전문가의 핵심 역량과 도구</p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-12 mb-16">
-                <!-- Design Skills -->
-                <div class="scroll-reveal">
-                    <h3 class="text-2xl font-bold mb-6 toss-blue">Design Expertise</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-toss-blue rounded-full mr-4"></div>
-                            <span class="text-lg">Brand Identity Design</span>
+            <div class="skills-grid">
+                <!-- Financial Design Skills -->
+                <div class="skill-category scroll-reveal">
+                    <h3>Financial Design Expertise</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-bullet"></div>
+                            <span class="skill-name">FinTech UX Design</span>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-toss-blue rounded-full mr-4"></div>
-                            <span class="text-lg">Visual Communication</span>
+                        <div class="skill-item">
+                            <div class="skill-bullet"></div>
+                            <span class="skill-name">Data Visualization</span>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-toss-blue rounded-full mr-4"></div>
-                            <span class="text-lg">Brand System Design</span>
+                        <div class="skill-item">
+                            <div class="skill-bullet"></div>
+                            <span class="skill-name">Trust & Security Design</span>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-toss-blue rounded-full mr-4"></div>
-                            <span class="text-lg">UI/UX Design</span>
+                        <div class="skill-item">
+                            <div class="skill-bullet"></div>
+                            <span class="skill-name">Mobile Banking UI</span>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-toss-blue rounded-full mr-4"></div>
-                            <span class="text-lg">Motion Graphics</span>
+                        <div class="skill-item">
+                            <div class="skill-bullet"></div>
+                            <span class="skill-name">Dashboard Design</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Tools -->
-                <div class="scroll-reveal">
-                    <h3 class="text-2xl font-bold mb-6 toss-blue">Design Tools</h3>
-                    <div class="grid grid-cols-3 gap-4">
-                        <div class="text-center p-4 bg-gray-50 rounded-lg card-hover">
-                            <i class="fab fa-figma text-3xl text-toss-blue mb-2"></i>
-                            <p class="text-sm font-medium">Figma</p>
+                <div class="skill-category scroll-reveal">
+                    <h3>Design & Analytics Tools</h3>
+                    <div class="tools-grid">
+                        <div class="tool-card card-hover">
+                            <i class="fab fa-figma tool-icon"></i>
+                            <p class="tool-name">Figma</p>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg card-hover">
-                            <i class="fas fa-pen-nib text-3xl text-toss-blue mb-2"></i>
-                            <p class="text-sm font-medium">Adobe CC</p>
+                        <div class="tool-card card-hover">
+                            <i class="fas fa-chart-bar tool-icon"></i>
+                            <p class="tool-name">Tableau</p>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg card-hover">
-                            <i class="fas fa-cube text-3xl text-toss-blue mb-2"></i>
-                            <p class="text-sm font-medium">Cinema 4D</p>
+                        <div class="tool-card card-hover">
+                            <i class="fas fa-pen-nib tool-icon"></i>
+                            <p class="tool-name">Adobe CC</p>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg card-hover">
-                            <i class="fas fa-vector-square text-3xl text-toss-blue mb-2"></i>
-                            <p class="text-sm font-medium">Illustrator</p>
+                        <div class="tool-card card-hover">
+                            <i class="fab fa-sketch tool-icon"></i>
+                            <p class="tool-name">Sketch</p>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg card-hover">
-                            <i class="fas fa-image text-3xl text-toss-blue mb-2"></i>
-                            <p class="text-sm font-medium">Photoshop</p>
+                        <div class="tool-card card-hover">
+                            <i class="fas fa-database tool-icon"></i>
+                            <p class="tool-name">SQL</p>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-lg card-hover">
-                            <i class="fas fa-film text-3xl text-toss-blue mb-2"></i>
-                            <p class="text-sm font-medium">After Effects</p>
+                        <div class="tool-card card-hover">
+                            <i class="fas fa-code tool-icon"></i>
+                            <p class="tool-name">React</p>
                         </div>
                     </div>
                 </div>
@@ -378,41 +286,39 @@
     </section>
 
     <!-- Design Strategy Section -->
-    <section class="section-spacing light-blue-bg">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16 scroll-reveal">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="gradient-text">Design Strategy</span>
-                    </h2>
-                    <p class="text-xl text-gray-600">논리적 설득력을 갖춘 디자인 전략</p>
+    <section class="section-spacing strategy-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">
+                    <span class="gradient-text">금융 디자인 전략</span>
+                </h2>
+                <p class="section-subtitle">데이터 기반의 금융 서비스 디자인 전략</p>
+            </div>
+            
+            <div class="strategy-grid">
+                <div class="strategy-card scroll-reveal card-hover">
+                    <div class="strategy-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="strategy-title">User Research & Financial Behavior</h3>
+                    <p class="strategy-description">금융 사용자들의 행동 패턴과 심리를 분석하여, 재무적 의사결정을 돕는 직관적인 디자인 시스템을 구축합니다.</p>
+                    <div class="strategy-tags">
+                        <span class="strategy-tag">Behavioral Analysis</span>
+                        <span class="strategy-tag">User Testing</span>
+                        <span class="strategy-tag">Financial Psychology</span>
+                    </div>
                 </div>
                 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg scroll-reveal card-hover">
-                        <div class="w-12 h-12 bg-toss-blue rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-search text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 toss-blue">Design Research & UX Strategy</h3>
-                        <p class="text-gray-600 mb-4">사용자 리서치와 데이터 분석을 통해 인사이트를 도출하고, 이를 기반으로 한 UX 전략을 수립하여 브랜드 경험을 최적화합니다.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs bg-toss-blue text-white px-2 py-1 rounded-full">User Research</span>
-                            <span class="text-xs bg-toss-blue text-white px-2 py-1 rounded-full">Data Analysis</span>
-                            <span class="text-xs bg-toss-blue text-white px-2 py-1 rounded-full">Journey Mapping</span>
-                        </div>
+                <div class="strategy-card scroll-reveal card-hover">
+                    <div class="strategy-icon">
+                        <i class="fas fa-lock"></i>
                     </div>
-                    
-                    <div class="bg-white p-8 rounded-2xl shadow-lg scroll-reveal card-hover">
-                        <div class="w-12 h-12 bg-toss-blue rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-handshake text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 toss-blue">Brand Communication & Partnership</h3>
-                        <p class="text-gray-600 mb-4">브랜드 스토리텔링과 파트너십 전략을 통해 브랜드 가치를 확산하고, 비즈니스 목표 달성에 기여하는 커뮤니케이션을 설계합니다.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs bg-toss-blue text-white px-2 py-1 rounded-full">Brand Storytelling</span>
-                            <span class="text-xs bg-toss-blue text-white px-2 py-1 rounded-full">Partnership</span>
-                            <span class="text-xs bg-toss-blue text-white px-2 py-1 rounded-full">Growth Strategy</span>
-                        </div>
+                    <h3 class="strategy-title">Trust Design & Security UX</h3>
+                    <p class="strategy-description">금융 서비스의 보안과 신뢰성을 시각적으로 구현하고, 사용자의 안심감을 높이는 디자인 원칙을 적용합니다.</p>
+                    <div class="strategy-tags">
+                        <span class="strategy-tag">Security Design</span>
+                        <span class="strategy-tag">Trust Signals</span>
+                        <span class="strategy-tag">Compliance UX</span>
                     </div>
                 </div>
             </div>
@@ -420,113 +326,108 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-spacing bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                    <span class="gradient-text">연락처</span>
+    <section id="contact" class="section-spacing contact-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">
+                    <span class="gradient-text">협업 제안</span>
                 </h2>
-                <p class="text-xl text-gray-600 mb-8">함께 브랜드 가치를 만들어갈 기회를 기다립니다</p>
-                <div class="max-w-2xl mx-auto mb-12 p-6 bg-toss-blue-bg rounded-2xl">
-                    <p class="text-lg text-toss-blue font-medium">
-                        "브랜드 디자인이 토스증권을 사랑하는 이유가 되도록 만듭니다"
-                    </p>
-                </div>
+                <p class="section-subtitle">금융 서비스 디자인 전문가와 함께 성장을 만들어갈 기회</p>
             </div>
             
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="scroll-reveal">
-                        <h3 class="text-2xl font-bold mb-6 toss-blue">연락 정보</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <i class="fas fa-envelope text-toss-blue text-xl w-8"></i>
-                                <span class="text-lg">portfolio@designer.com</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fab fa-linkedin text-toss-blue text-xl w-8"></i>
-                                <span class="text-lg">linkedin.com/in/branddesigner</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fab fa-behance text-toss-blue text-xl w-8"></i>
-                                <span class="text-lg">behance.net/branddesigner</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-globe text-toss-blue text-xl w-8"></i>
-                                <span class="text-lg">Seoul, Korea</span>
-                            </div>
+            <div class="contact-highlight scroll-reveal">
+                <p class="contact-quote">
+                    "금융 디자인이 토스증권을 더 신뢰받는 서비스로 만들겠습니다"
+                </p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info scroll-reveal">
+                    <h3>연락 정보</h3>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span class="contact-text">fintech.designer@professional.com</span>
                         </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="text-xl font-bold mb-4">전문 분야</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Brand Identity</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Visual Design</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">UX Strategy</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Design Systems</span>
-                            </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin contact-icon"></i>
+                            <span class="contact-text">linkedin.com/in/financial-designer</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-behance contact-icon"></i>
+                            <span class="contact-text">behance.net/fintech-designer</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe contact-icon"></i>
+                            <span class="contact-text">Seoul, Korea</span>
                         </div>
                     </div>
                     
-                    <div class="scroll-reveal">
-                        <h3 class="text-2xl font-bold mb-6 toss-blue">메시지 보내기</h3>
-                        <form class="space-y-4">
-                            <input type="text" placeholder="이름" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-toss-blue">
-                            <input type="email" placeholder="이메일" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-toss-blue">
-                            <input type="text" placeholder="회사명 (선택사항)" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-toss-blue">
-                            <textarea placeholder="프로젝트 내용 또는 문의사항" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-toss-blue"></textarea>
-                            <button type="submit" class="w-full toss-blue-bg text-white py-3 rounded-lg font-bold hover:bg-opacity-90 transition">
-                                메시지 보내기
-                            </button>
-                        </form>
+                    <h4>금융 디자인 전문 분야</h4>
+                    <div class="expertise-tags">
+                        <span class="expertise-tag">FinTech UX</span>
+                        <span class="expertise-tag">Mobile Banking</span>
+                        <span class="expertise-tag">Data Visualization</span>
+                        <span class="expertise-tag">Trust Design</span>
                     </div>
+                </div>
+                
+                <div class="contact-form scroll-reveal">
+                    <h3>프로젝트 문의</h3>
+                    <form>
+                        <input type="text" placeholder="이름" class="form-input">
+                        <input type="email" placeholder="이메일" class="form-input">
+                        <input type="text" placeholder="회사명 (선택사항)" class="form-input">
+                        <textarea placeholder="금융 서비스 디자인 프로젝트 내용" class="form-textarea"></textarea>
+                        <button type="submit" class="btn-submit">문의하기</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="text-center">
-                <div class="mb-6">
-                    <span class="text-2xl font-bold gradient-text">Brand Designer</span>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="gradient-text">Financial Design Expert</span>
                 </div>
-                <p class="text-gray-400 mb-8">
-                    브랜드 가치를 디자인으로 증명하는 전문가
+                <p class="footer-description">
+                    금융 서비스 디자인으로 비즈니스 가치를 창출하는 전문가
                 </p>
-                <div class="flex justify-center space-x-6 mb-8">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin text-xl"></i>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-behance text-xl"></i>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-behance"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-dribbble text-xl"></i>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-dribbble"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-github text-xl"></i>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
                     </a>
                 </div>
-                <div class="border-t border-gray-800 pt-8">
-                    <p class="text-gray-400">&copy; 2026 Brand Identity & Experience Designer. All rights reserved.</p>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Financial Service Design Expert. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
         // Smooth scrolling
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             section.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
         }
 
         // Smooth scroll for navigation links
@@ -538,7 +439,7 @@
                 if (targetSection) {
                     targetSection.scrollIntoView({ behavior: 'smooth' });
                     // Close mobile menu if open
-                    document.getElementById('mobileMenu').classList.add('hidden');
+                    document.getElementById('mobileMenu').classList.remove('active');
                 }
             });
         });
@@ -572,27 +473,16 @@
         // Add parallax effect to hero section
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const hero = document.querySelector('#home');
+            const hero = document.querySelector('.hero-gradient');
             if (hero) {
                 hero.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
         });
 
-        // Add hover effect to cards
-        document.querySelectorAll('.card-hover').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
         // Initialize animations on page load
         document.addEventListener('DOMContentLoaded', function() {
             // Add initial animation to hero section
-            const heroElement = document.querySelector('#home .scroll-reveal');
+            const heroElement = document.querySelector('.hero-content');
             if (heroElement) {
                 setTimeout(() => {
                     heroElement.classList.add('active');
